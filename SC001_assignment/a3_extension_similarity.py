@@ -2,7 +2,6 @@
 File: similarity.py (extension)
 Name: Sanny Lin
 ----------------------------
-(Instructions by stanCode)
 This program is an extension of assignment3!
 It will compare short dna sequence, s2,
 with sub sequences of a long dna sequence, s1
