@@ -2,7 +2,6 @@
 File: name_sq.py (extension)
 Name: Sanny Lin
 ----------------------------
-(Instructions by stanCode)
 This program is an extension of assignment3!
 It will ask the user to provide a name, 
 and the square pattern of the given name 
