@@ -16,22 +16,21 @@ ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def main():
     """
-    find the index in "new_alpha" of each character in the inputted sentence,
+    Find the index in "new_alpha" of each character in the inputted sentence,
     add the character with corresponding index in "ALPHABET" to "ans" in order,
-    at last, print the result "ans".
+    at last, return and print the result "ans".
     """
-    ans = decipher()
-    print("The deciphered string is: " + ans)
+    print("The deciphered string is: " + decipher())
 
 
 def decipher():
     """
-    district in 2 parts:
-    1. get the new sequence of ALPHABET = "new_alpha":
-            the last "n" numbers of ALPHABET will move to the front of ALPHABET
-    2. decipher the inputted sentence
-        (1) find the index in "new_alpha" of each character in the inputted sentence
-        (2) add the character with corresponding index in "ALPHABET" to "ans" in order
+    District in 2 parts:
+    1. Get the new sequence of ALPHABET = "new_alpha":
+       the last "n" numbers of ALPHABET will move to the front of ALPHABET
+    2. Decipher the inputted sentence
+        (1) Find the index in "new_alpha" of each character in the inputted sentence
+        (2) Add the character with corresponding index in "ALPHABET" to "ans" in order
     :return ans: str, which is the inputted sentence after deciphered
     """
     # get the new sequence of ALPHABET = new_alpha
@@ -47,11 +46,8 @@ def decipher():
             ans += ALPHABET[j]
         else:  # j == -1, means not in ALPHABET, maybe exists space or landmark
             ans += s[i]
-
     return ans
 
-
-# DO NOT EDIT CODE BELOW THIS LINE #
 
 if __name__ == '__main__':
     main()
