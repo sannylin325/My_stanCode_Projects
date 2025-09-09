@@ -2,7 +2,6 @@
 File: rocket.py
 Name: Sanny Lin
 -----------------------
-(Instructions by stanCode)
 This program should implement a console program
 that draws ASCII art - a rocket.
 The size of rocket is determined by a constant
@@ -96,4 +95,5 @@ def lower():
 
 if __name__ == "__main__":
     main()
+
 
