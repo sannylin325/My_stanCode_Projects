@@ -2,7 +2,6 @@
 File: complement.py
 Name: Sanny Lin
 ----------------------------
-(Instructions by stanCode)
 This program uses string manipulation to
 tackle a real world problem - finding the
 complement strand of a DNA sequence.
