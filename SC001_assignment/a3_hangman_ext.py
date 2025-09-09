@@ -22,16 +22,16 @@ N_TURNS = 7
 
 def main():
     """
-    program: hangman game with steps limit
-    1. generate a random word by random_word() = word
-    2. let user input an alphabet "input_ch"
+    Hangman game with steps limit
+    1. Generate a random word by random_word() = word
+    2. Let user input an alphabet "input_ch"
         * if "input_ch" is not alphabet or not single, print "Illegal format."
-    3. if "input_ch" is in the word:
-       move the value of "ans" into "old_ans", and add new value into "ans":
+    3. If "input_ch" is in the word:
+       Move the value of "ans" into "old_ans", and add new value into "ans":
         (1) for word[i] is not "input_ch": add the value of the same index of "old_ans" into "ans"
         (2) for word[i] is "input_ch": add "input_ch" into "ans"
-    4. if ans == word: the user win the game
-    5. if the user is run out of steps before ans == word: the user lose the game
+    4. If ans == word: the user win the game
+    5. If the user is run out of steps before ans == word: the user lose the game
     """
     # set variables
     word = random_word()
@@ -40,42 +40,43 @@ def main():
     ans = "-" * len(word)
 
     # start guessing
-    while ans != word:  # haven't guessed out the answer
-        if step != 0:  # haven't run out of steps
-            input_ch = (input("Your guess: ")).upper()  # case-insensitive
-            # check if input_ch is a single alphabet
-            while not input_ch.isalpha() or len(input_ch) != 1:
-                print("Illegal format.")
-                input_ch = (input("Your guess: ")).upper()
-            # check if input_ch is in the word
-            if word.find(input_ch) == -1:  # not in the word
-                step -= 1
-                print("There is no " + input_ch + "'s in the world.")
-                # renew hangman image
-                hangman(step)
-            else:  # is in the word
-                old_ans = ans
-                ans = ""
-                for i in range(len(word)):  # renew "ans"
-                    if word[i] != input_ch:
-                        ans += old_ans[i]
-                    else:
-                        ans += input_ch
-                print("You are correct!")
-            # current answer & remaining steps
-            if step != 0 and ans != word:
-                print("The word looks like " + str(ans))
-                print("You have " + str(step) + " wrong guesses left.")
-        else:  # run out of steps
-            print("You are completely hung :(")
-            hangman(step)
-            break
-    # guess out the correct answer
-    if ans == word:
-        print("You win!!")
-    # print the correct answer, no matter lose or win
-    print("The word was: " + word)
+    while True:
+        # check current answer & remaining steps
+        print("The word looks like " + str(ans))
+        print("You have " + str(step) + " wrong guesses left.")
 
+        # input guess
+        input_ch = (input("Your guess: ")).upper()  # case-insensitive
+        # check if input_ch is a single alphabet
+        while not input_ch.isalpha() or len(input_ch) != 1:
+            print("Illegal format.")
+            input_ch = (input("Your guess: ")).upper()
+
+        # check if input_ch is in the word
+        if word.find(input_ch) == -1:  # not in the word
+            step -= 1
+            print("There is no " + input_ch + "'s in the world.")
+            # renew hangman image
+            hangman(step)
+        else:
+            old_ans = ans
+            ans = ""
+            for i in range(len(word)):  # renew "ans"
+                if word[i] != input_ch:
+                    ans += old_ans[i]
+                else:
+                    ans += input_ch
+            print("You are correct!")
+
+        # check if lose or win
+        if step == 0:
+            print("You are completely hung :(")
+            break
+        elif ans == word:
+            print("You win!!")
+            break
+    # print the correct answer at last
+    print("The word was: " + word)
 
 def random_word():
     # return a word below in random
@@ -145,8 +146,6 @@ def hangman(step):
             print(" |")
     print("-----")
 
-
-# DO NOT EDIT CODE BELOW THIS LINE #
 
 if __name__ == '__main__':
     main()
