@@ -29,10 +29,10 @@ def build_complement(dna):
                     regulation: "A" <-> "T" ; "C" <-> "G"
     * if no inputted DNA sequence: print "DNA strand is missing."
     """
-    result = ''
     if dna == '':
-        print('DNA strand is missing.', end="")  # clean the next empty line
+        return 'DNA strand is missing.'
     else:
+        result = ''
         for i in range(len(dna)):
             if dna[i] == 'A':
                 result += 'T'
@@ -44,8 +44,6 @@ def build_complement(dna):
                 result += 'C'
     return result
 
-
-# DO NOT EDIT CODE BELOW THIS LINE #
 
 if __name__ == '__main__':
     main()
