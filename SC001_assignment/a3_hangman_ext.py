@@ -2,7 +2,6 @@
 File: hangman.py
 Name: Sanny Lin
 -----------------------------
-(Instructions by stanCode)
 This program plays hangman game.
 Users see a dashed word, trying to
 correctly figure the un-dashed word out
