@@ -2,7 +2,6 @@
 File: caesar.py
 Name: Sanny Lin
 ------------------------------
-(Instructions by stanCode)
 This program demonstrates the idea of caesar cipher.
 Users will be asked to input a number to produce shifted
 ALPHABET as the cipher table. After that, any strings typed
