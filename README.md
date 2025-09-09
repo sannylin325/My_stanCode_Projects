@@ -1,4 +1,4 @@
-# My_stanCode_Projects
+# My stanCode Projects
 
 - I started to learn python with "stanCode" courses.
 - I had finished courses "SC001", "SC101" in 2023, and finished courses "SC201" in 2024.
