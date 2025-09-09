@@ -39,7 +39,5 @@ def my_name_pattern(name):
         print(name[len(name)-i-1], end="")
 
 
-# DO NOT EDIT CODE BELOW THIS LINE #
-
 if __name__ == '__main__':
     main()
