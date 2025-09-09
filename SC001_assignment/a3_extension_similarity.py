@@ -13,19 +13,17 @@ what people are doing in the bio industry.
 
 def main():
     """
-    program: compare the short_sequence with the long_sequence,
-             find the most match piece in long_sequence
+    Compare the short_sequence with the long_sequence,
+    find the most match piece in long_sequence.
     """
-    ans = match()
-    print("The best match is " + ans)
+    print("The best match is " + match())
 
 
 def match():
     """
-    function:
-    1. cut the long_sequence into short_digit sizes at the beginning of index[i]
+    1. Cut the long_sequence into short_digit sizes at the beginning of index[i]
        ("i" is a loop from 0 to (long_digit-short_digit+1))
-    2. compare short_sequence with each cut_sequences
+    2. Compare short_sequence with each cut_sequences
         (1) if short_sequence[j] == cut_sequence[j]: get 1 score
         (2) if score > high_score:
             reassign high_score
@@ -56,11 +54,8 @@ def match():
         if score > high_score:
             high_score = score
             ans = cut_sequence
-
     return ans
 
-
-# DO NOT EDIT CODE BELOW THIS LINE #
 
 if __name__ == '__main__':
     main()
