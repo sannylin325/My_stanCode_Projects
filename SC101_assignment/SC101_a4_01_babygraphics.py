@@ -8,7 +8,7 @@ Jerry Liao.
 """
 
 import tkinter
-import babynames
+import SC101_a4_01_babynames as babynames
 import babygraphicsgui as gui
 
 FILENAMES = [
