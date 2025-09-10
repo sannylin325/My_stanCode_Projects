@@ -1,6 +1,6 @@
 """
 File: babygraphics.py
-Name: Sanny Lin (TA mode)
+Name: Sanny Lin
 --------------------------------
 SC101 Baby Names Project
 Adapted from Nick Parlante's Baby Names assignment by
